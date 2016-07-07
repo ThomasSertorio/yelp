@@ -1,0 +1,13 @@
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://loremflickr.com/300/300/restaurant');">
+  <div class="card-category"><%= restaurant.category %></div>
+  <div class="card-description">
+    <h2><%= restaurant.name %></h2>
+    <p>
+    <% if !restaurant.reviews.blank? %>
+      <p><%= restaurant.reviews.last.content[0..140] %>...</p>
+    <% else %>
+      <p>Be the first to review it !</p>
+    <% end %>
+  </div>
+  <%= link_to "", restaurant, class:"card-link" %>
+</div>

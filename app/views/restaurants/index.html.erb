@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<h1 class="text-center">Welcome to Yelp !</h1>
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |resto| %>
+      <div class="col-xs-12 col-sm-3">
+        <%= render "restaurant_card", restaurant: resto %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
